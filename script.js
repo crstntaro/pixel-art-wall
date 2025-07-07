@@ -4,8 +4,8 @@ const clearBtn = document.getElementById('clearBtn');
 const saveBtn = document.getElementById('saveBtn');
 const board = document.getElementById('board');
 
-const rows = 24;
-const cols = 24;
+const rows = 16;
+const cols = 16;
 let isDrawing = false;
 
 // Create canvas

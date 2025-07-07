@@ -112,7 +112,7 @@ button {
 
 .board-pixels {
   display: grid;
-  grid-template-columns: repeat(32, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   gap: 1px;
   background: #ccc;
 }
