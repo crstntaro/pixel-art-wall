@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  color: #333;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  margin-top: 40px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.app {
+  padding: 20px;
+}
+
+.canvas-container {
+  margin: 0 auto;
+  max-width: 600px;
+  background: #fffbea;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 10px;
+}
+
+#colorPicker {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  background-color: #4caf50;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#clearBtn {
+  background-color: #9e9e9e;
+}
+#clearBtn:hover {
+  background-color: #777;
+}
+#saveBtn:hover {
+  background-color: #3d8c44;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 1px;
+  background-image: linear-gradient(#ccc 1px, transparent 1px),
+                    linear-gradient(to right, #ccc 1px, transparent 1px);
+  background-size: 10px 10px;
+  background-position: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.board-item {
+  background: #fef68a;
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 10px;
+  position: relative;
+  transform: rotate(var(--rotate));
+  transition: transform 0.2s ease;
+}
+
+.board-item:hover {
+  transform: scale(1.05) rotate(var(--rotate));
+}
+
+.board-pixels {
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  gap: 1px;
+  background: #ccc;
+}
+
+.board-pixels .cell {
+  width: 10px;
+  height: 10px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #ff5c5c;
+  color: white;
+  border: none;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.delete-btn:hover {
+  background: #e04a4a;
+}
